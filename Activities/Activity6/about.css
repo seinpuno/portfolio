@@ -1,0 +1,120 @@
+        .about-banner {
+            background: linear-gradient(135deg, #f8f5f0, #c6a96b);
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .about-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #4b2e1e;
+        }
+
+        .about-banner p {
+            font-size: 18px;
+            color: #3e2f1c;
+            margin-bottom: 0;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4b2e1e;
+        }
+
+        .about-content h3 {
+            margin-top: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #3e2f1c;
+        }
+
+        .about-content p {
+            margin: 15px 0;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+.owner-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.owner-section img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #c6a96b;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.owner-section p {
+    flex: 1;
+}
+
+.map-container {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.inquiry-form {
+    margin-top: 15px;
+    background: #f8f5f0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c6a96b;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+    outline: none;
+    border-color: #a67c3b;
+    box-shadow: 0 0 5px rgba(198,169,107,0.5);
+}
+
+.inquiry-form button {
+    background: linear-gradient(135deg, #c6a96b, #a67c3b);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.inquiry-form button:hover {
+    background: linear-gradient(135deg, #a67c3b, #8a642f);
+    transform: scale(1.05);
+}

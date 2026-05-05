@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kris Nies | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="logo-container">
+        <img src="images/logov4.png" alt="Kris Nies Logo" class="main-logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="#home" class="active">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#education">EDUCATION</a> <!-- New Link -->
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+    <div class="lang">KL | N</div>
+</nav>
+
+<main class="content-wrapper">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="images/Nies.png" alt="Kris Laurince Nies">
+            </div>
+            <div class="hero-info">
+                <h1>Hi, I'm <br><span class="name-dark">Kris Laurince Nies</span></h1>
+                <p class="subtitle">Junior Web Developer (In Training)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="section-subtitle">DISCOVER</span>
+                <h2>ABOUT_ME</h2>
+                <p>
+                    I am an aspiring <strong>Junior Web Developer</strong> currently honing my skills in front-end architecture and system logic. My journey involves bridging the gap between clean user interface design and efficient back-end functionality.
+                </p>
+                <p>
+                    With a focus on <strong>HTML5, CSS3, and JavaScript</strong>, I specialize in building responsive, interactive web applications. I am passionate about clean code, modular design, and solving complex logical challenges.
+                </p>
+            </div>
+
+            <div class="skills-container">
+                <h3>CORE_SKILLS</h3>
+                
+                <div class="skill-item">
+                    <div class="skill-info"><span>HTML / CSS</span><span>50%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 50%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info"><span>JAVASCRIPT</span><span>30%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 30%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info"><span>C</span><span>20%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 20%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info"><span>UI DESIGN</span><span>50%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 50%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 3. Interactive Slider Section -->
+    <section class="slider-section">
+        <div class="slider-title"><span>EXPLORE_MORE</span>
+            <a href="#portfolio" class="view-all">VIEW ALL +</a>
+        </div>
+        <div class="marquee">
+            <div class="marquee-content">
+                <!-- Set 1 -->
+                <a href="Activities/Activity6/index.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://i.ytimg.com/vi/0Oq3EhXAwig/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCG9tnPcVQ-gej5yBywA4ml3yPOVw" alt="Activity 6"><span>ACTIVITY 6</span>
+                </a>
+                <a href="Activities/activity11/activity11.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://i.ytimg.com/vi/Kn06785pkJg/maxresdefault.jpg" alt="Activity 11"><span>ACTIVITY 11</span>
+                </a>
+                <a href="Activities/activity10/activity10.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.scaler.com/topics/images/javascript-arithmetic-operators-thumbnail.webp" alt="Activity 10"><span>ACTIVITY 10</span>
+                </a>
+                <a href="Activities/activity5 folder/activity5.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.inflearn.com/public/courses/327351/cover/44676d5f-95fc-46eb-baea-6c344bdcb2e2/html-css-tumbnail2.jpg" alt="Activity 5"><span>ACTIVITY 5</span>
+                </a>
+                <a href="Activities/activity7.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="Thumbnails/date.png" alt="Activity 7"><span>ACTIVITY 7</span>
+                </a>
+
+                <!-- Set 2 (Duplicate for seamless loop) -->
+                <a href="Activities/Activity6/index.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://i.ytimg.com/vi/0Oq3EhXAwig/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCG9tnPcVQ-gej5yBywA4ml3yPOVw" alt="Activity 6"><span>ACTIVITY 6</span>
+                </a>
+                <a href="Activities/activity11/activity11.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://i.ytimg.com/vi/Kn06785pkJg/maxresdefault.jpg" alt="Activity 11"><span>ACTIVITY 11</span>
+                </a>
+                <a href="Activities/activity10/activity10.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.scaler.com/topics/images/javascript-arithmetic-operators-thumbnail.webp" alt="Activity 10"><span>ACTIVITY 10</span>
+                </a>
+                <a href="Activities/activity5 folder/activity5.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.inflearn.com/public/courses/327351/cover/44676d5f-95fc-46eb-baea-6c344bdcb2e2/html-css-tumbnail2.jpg" alt="Activity 5"><span>ACTIVITY 5</span>
+                </a>
+                <a href="Activities/activity7.html" class="slide" target="_blank" rel="noopener noreferrer">
+                    <img src="Thumbnails/date.png" alt="Activity 7"><span>ACTIVITY 7</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="education-container">
+            <div class="section-header">
+                <h2>ACADEMIC_PATH</h2>
+                <p class="section-subtitle">EDUCATIONAL BACKGROUND</p>
+            </div>
+
+            <div class="timeline">
+                <!-- 1. Current University -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="year">2025 - PRESENT</span>
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <p class="institution">Cebu Institute of Technology - University</p>
+                    </div>
+                </div>
+
+                <!-- 2. Senior High School -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="year">2023 - 2025</span>
+                        <h3>Senior High School</h3>
+                        <p class="institution">Cebu Institute of Technology - University</p>
+                    </div>
+                </div>
+
+                <!-- 3. Junior High School -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="year">2017 - 2023</span>
+                        <h3>Junior High School</h3>
+                        <p class="institution">Holy Rosary School of Pardo</p>
+                    </div>
+                </div>
+
+                <!-- 4. Elementary Education -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="year">2014 - 2017</span>
+                        <h3>Elementary Education</h3>
+                        <p class="institution">Faithway Baptist Christian Academy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header">
+            <h2>MY_PORTFOLIO</h2>
+        </div>
+
+        <div class="project-container">
+            
+            <!-- Activity 1 -->
+            <a href="Activities/activity1.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-1"></div>
+                    <span class="category">HTML / CSS</span>
+                    <h3>ACTIVITY 1</h3>
+                    <div class="tags">#Typography #Media_Integration #Inline_Styles</div>
+                    <p>A personal introduction page featuring custom background colors, text decorations, and image media integration.</p>
+                </div>
+            </a>
+
+            <!-- Activity 2 -->
+            <a href="Activities/activity2.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-2"></div>
+                    <span class="category">LAYOUT</span>
+                    <h3>ACTIVITY 2</h3>
+                    <div class="tags">#Nested_Lists #Background_Scaling #Data_Structure</div>
+                    <p>A structured index using nested lists to organize a reading library, featuring a full-screen fixed background image.</p>
+                </div>
+            </a>
+
+            <!-- Activity 3 -->
+            <a href="Activities/activity3.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-3"></div>
+                    <span class="category">TABLES</span>
+                    <h3>ACTIVITY 3</h3>
+                    <div class="tags">#Table_Architecture #Image_Alignment #UI_Grid</div>
+                    <p>A centered image gallery organized within a technical table structure for consistent layout spacing.</p>
+                </div>
+            </a>
+
+            <!-- Activity 4 -->
+            <a href="Activities/activity4.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-4"></div>
+                    <span class="category">DEVELOPMENT</span>
+                    <h3>ACTIVITY 4</h3>
+                    <div class="tags">#Forms #Input_Validation #HTML_Basics</div>
+                    <p>A standard user information form implementing various input types including text, radio buttons, and checkboxes.</p>
+                </div>
+            </a>
+
+            <!-- Activity 4v2 -->
+            <a href="Activities/activity4v2.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-4v2"></div>
+                    <span class="category">UI DESIGN</span>
+                    <h3>ACTIVITY 4V2</h3>
+                    <div class="tags">#Dark_Mode #Discord_Aesthetic #Form_Handling</div>
+                    <p>Advanced user information form featuring a custom dark-mode theme inspired by Discord's UI.</p>
+                </div>
+            </a>
+
+            <!-- Activity 5 -->
+            <a href="Activities/activity5 folder/activity5.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-5"></div>
+                    <span class="category">HTML / CSS</span>
+                    <h3>ACTIVITY 5</h3>
+                    <div class="tags">#Semantic_HTML #Business_Layout #Nav_Architecture</div>
+                    <p>A professional business landing page using semantic structure, including a fixed navbar and dedicated content containers.</p>
+                </div>
+            </a>
+
+            <!-- Activity 6 -->
+            <a href="Activities/Activity6/index.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-6"></div>
+                    <span class="category">WEB ARCHITECTURE</span>
+                    <h3>ACTIVITY 6</h3>
+                    <div class="tags">#Asset_Management #Multi_Page #Site_Navigation</div>
+                    <p>A multi-page website architecture featuring cross-page linking between home and about sections, with centralized image management.</p>
+                </div>
+            </a>
+
+            <!-- Activity 7 -->
+            <a href="Activities/activity7.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-7"></div>
+                    <span class="category">JAVASCRIPT</span>
+                    <h3>ACTIVITY 7</h3>
+                    <div class="tags">#DOM_Manipulation #Events #Date_Function</div>
+                    <p>Interactive element that utilizes JavaScript to retrieve and inject real-time system date and time into the DOM.</p>
+                </div>
+            </a>
+
+            <!-- Activity 8 -->
+            <a href="Activities/activity8.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-8"></div>
+                    <span class="category">JAVASCRIPT</span>
+                    <h3>ACTIVITY 8</h3>
+                    <div class="tags">#Concatenation #Functions #UI_Feedback</div>
+                    <p>Implementation of JavaScript alert boxes and string concatenation for user-facing notifications.</p>
+                </div>
+            </a>
+
+            <!-- Activity 9 -->
+            <a href="Activities/activity9.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-9"></div>
+                    <span class="category">JAVASCRIPT</span>
+                    <h3>ACTIVITY 9</h3>
+                    <div class="tags">#Input_Validation #Conditional_Logic #Dynamic_Text</div>
+                    <p>A prompt-driven interaction system that validates user input and provides personalized greetings through innerHTML updates.</p>
+                </div>
+            </a>
+
+            <!-- Activity 10 -->
+            <a href="Activities/activity10/activity10.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-10"></div>
+                    <span class="category">JAVASCRIPT</span>
+                    <h3>ACTIVITY 10</h3>
+                    <div class="tags">#Arithmetic_Logic #Data_Validation #Input_Handling</div>
+                    <p>A functional calculator built with script.js that processes arithmetic operators and implements logical gates to prevent division errors.</p>
+                </div>
+            </a>
+
+            <!-- Activity 11 -->
+            <a href="Activities/activity11/activity11.html" target="_blank" rel="noopener noreferrer" class="project-link">
+                <div class="project-block">
+                    <div class="thumbnail-preview act-11"></div>
+                    <span class="category">JAVASCRIPT</span>
+                    <h3>ACTIVITY 11</h3>
+                    <div class="tags">#Iteration_Logic #Loop_Structures #DOM_Automation</div>
+                    <p>A technical demonstration comparing For, While, and Do-While loops to dynamically generate and inject repeated content into the DOM.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section (Light Theme) -->
+    <section id="contact" class="contact-section light">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-subtitle">GET IN TOUCH</span>
+                <h2>CONTACT_ME</h2>
+                <p class="contact-description">I'm currently looking for new opportunities and collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <strong>EMAIL</strong>
+                        <p class="detail-text">nkrislaurince2@gmail.com</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>LOCATION</strong>
+                        <p class="detail-text">Cebu City, Philippines</p>
+                    </div>
+                </div>
+
+                <!-- Map Integration -->
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2364.895850230637!2d123.85275408249274!3d10.278170141492943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1777841196676!5m2!1sen!2sph"
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/seinpuno/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/namekrislurins" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/slimeypuno/" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="YOUR NAME" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="YOUR EMAIL" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="SUBJECT">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="YOUR MESSAGE" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logov5.png" alt="Kris Nies Logo" class="footer-img">
+            </div>
+            
+            <div class="footer-content">
+                <p>&copy; 2026 KRIS LAURINCE NIES. ALL RIGHTS RESERVED.</p>
+                <div class="footer-tagline">JUNIOR WEB DEVELOPER IN TRAINING</div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#home">BACK TO TOP ↑</a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

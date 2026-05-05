@@ -1,0 +1,669 @@
+:root {
+    --redice-red: #E21D26;
+    --pure-white: #ffffff;
+    --ink-black: #1a1a1a;
+    --sidebar-width: 100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--pure-white);
+    color: var(--ink-black);
+    overflow-x: hidden;
+    background-image: url('images/background.jpg'); /* Your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image still while you scroll */
+    background-repeat: no-repeat;
+}
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0; top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    background: white;
+    z-index: 100;
+}
+
+.logo-container { width: 100%; padding: 0 10px; display: flex; justify-content: center; }
+.main-logo { width: 100%; max-width: 80px; height: auto; object-fit: contain; }
+
+.nav-links { display: flex; flex-direction: column; gap: 35px; }
+.nav-links a {
+    text-decoration: none; color: #bbb; font-size: 0.7rem; font-weight: 700;
+    writing-mode: vertical-rl; transform: rotate(180deg); transition: 0.3s;
+}
+.nav-links a.active, .nav-links a:hover { color: var(--redice-red); }
+
+/* Content Wrapper */
+.content-wrapper { margin-left: var(--sidebar-width); }
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url('images/background.jpg'); /* Verbatim background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex; align-items: center; padding: 0 8%;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(226, 29, 38, 0.9), rgba(26, 26, 26, 0.6));
+    z-index: 1;
+}
+
+.hero-container { position: relative; display: flex; align-items: center; gap: 80px; z-index: 2; }
+.hero-image img {
+    max-width: 420px; height: 520px; object-fit: cover;
+    box-shadow: 20px 20px 0px var(--ink-black);
+    filter: drop-shadow(2px 0 0 var(--ink-black)) drop-shadow(-2px 0 0 var(--ink-black)) 
+            drop-shadow(0 2px 0 var(--ink-black)) drop-shadow(0 -2px 0 var(--ink-black));
+}
+
+.hero-info h1 { font-family: 'Archivo Black', sans-serif; font-size: 3.5rem; text-transform: uppercase; }
+.name-dark { color: var(--redice-red); background: var(--ink-black); padding: 0 10px; }
+.subtitle { font-family: 'Montserrat', sans-serif; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+
+/* About Section Styles */
+.about-section {
+    padding: 100px 50px;
+    background-color: #ffffff; /* Contrast with hero/portfolio */
+    color: #1a1a1a;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+.about-text h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 48px;
+    margin: 10px 0 30px 0;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Skills Bars */
+.skills-container h3 {
+    font-family: 'Archivo Black', sans-serif;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #E21D26; /* Matches your dark name theme */
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+/* --- Slider Section Container --- */
+.slider-section {
+    padding: 80px 0;
+    background: transparent; /* Remove #111 or #fff */
+    overflow: hidden;
+    position: relative;
+    /* Optional: adds a slight dark tint so the slider stays readable */
+    background: rgba(233, 8, 8, 0.4); 
+    backdrop-filter: blur(5px); /* Optional: adds a glass effect */
+}
+
+/* Container for the title and the link */
+.slider-title {
+    display: flex;
+    justify-content: space-between; /* Pushes content to opposite ends */
+    align-items: center;           /* Vertically centers the text */
+    margin-bottom: 40px;
+    padding: 0 50px;               /* Matches your section padding so it aligns with the grid */
+}
+
+.slider-title span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* Styling the View All link */
+.slider-title .view-all {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: #ffffff; /* Using your accent color */
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-title .view-all:hover {
+    color: #ffffff;
+    transform: translateX(5px); /* Slight nudge effect on hover */
+}
+/* Individual Slide Styling */
+.slide {
+    flex-shrink: 0;
+    width: 300px;
+    height: 180px;
+    background-color: #000; /* Fallback color */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #333;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+}
+
+/* Updated Image Style to show your Home background clearly */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures your image fills the card without stretching */
+    opacity: 0.85;      /* High visibility for your home background image */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    filter: brightness(0.8); /* Slightly darker so text pops, becomes bright on hover */
+}
+
+/* Hover state to see the full background image clearly */
+.slide:hover img {
+    opacity: 1;
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+/* Ensure the text is still readable over your image */
+.slide span {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 1); /* Heavy shadow to read text over your photo */
+}
+/* --- The Marquee Logic --- */
+.marquee {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 30px;
+    /* Adjust the time (25s) to change the speed of the scroll */
+    animation: scrollAnimation 25s linear infinite;
+}
+
+/* --- STOP ON HOVER --- */
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* --- Individual Slide Styling --- */
+.slide {
+    flex-shrink: 0;
+    width: 300px;
+    height: 180px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #333;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+}
+
+/* Image styling within the slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Text overlay within the slide */
+.slide span {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    transition: letter-spacing 0.3s ease, font-size 0.3s ease;
+}
+
+/* --- Hover/Interaction States --- */
+.slide:hover {
+    transform: scale(1.08);
+    border-color: #E21D26; /* Accents the active slide */
+    z-index: 5;
+}
+
+.slide:hover img {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.slide:hover span {
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+
+/* Click feedback */
+.slide:active {
+    transform: scale(0.95);
+}
+
+/* --- Animation Keyframes --- */
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* This value must match the total width of one set of slides (including gaps) */
+        /* Formula: -(Width_of_Slide + Gap) * Number_of_Original_Slides */
+        transform: translateX(calc(-330px * 5)); 
+    }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .slide {
+        width: 220px;
+        height: 130px;
+    }
+    
+    @keyframes scrollAnimation {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 5)); }
+    }
+}
+
+/* Education Section */
+.education-section {
+    padding: 100px 50px;
+    background-color: #ffffff;
+}
+
+.education-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.education-section h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* Timeline Design */
+.timeline {
+    position: relative;
+    margin-top: 50px;
+    padding-left: 30px;
+    border-left: 2px solid #e0e0e0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -41px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #1a1a1a;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline-content {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.year {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: #E21D26; /* Accent color */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .education-section { padding: 60px 20px; }
+    .education-section h2 { font-size: 32px; }
+}
+
+/* portfolio Section */
+.portfolio-section { padding: 80px 8%; background: #fff; }
+.section-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--ink-black); padding-bottom: 20px; margin-bottom: 40px; }
+.section-header h2 { font-family: 'Archivo Black', sans-serif; font-size: 2rem; }
+
+.project-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.project-link { text-decoration: none; color: inherit; display: block; }
+
+.project-block {
+    padding: 20px; border: 1px solid #eee; transition: 0.3s ease; height: 100%; overflow: hidden;
+}
+
+.project-link:hover .project-block {
+    border-color: var(--redice-red); box-shadow: 10px 10px 0px var(--ink-black);
+}
+
+/* Thumbnails */
+.thumbnail-preview {
+    width: 100%; height: 180px; background: #f0f0f0; margin-bottom: 15px;
+    background-size: cover; background-position: center; transition: 0.5s;
+}
+.project-link:hover .thumbnail-preview { transform: scale(1.05); }
+
+/* Activity Specific Backgrounds[cite: 5, 6, 7] */
+.act-1 { background-image: url('https://velog.velcdn.com/images/mj9457/post/38dab1d5-9e2f-42cb-804a-9dfbc42e510a/image.jpg'); }
+.act-2 { background-image: url('https://juniortoexpert.com/wp-content/uploads/html-listing-tags.png'); }
+.act-3 { background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/20240403124329/HTML-Tables.webp'); }
+.act-4 { background-image: url('https://www.devopsschool.com/blog/wp-content/uploads/2023/07/image-256-1024x576.png'); }
+.act-4v2 { background-image: url('https://www.scaler.com/topics/images/form_tag_in_html-thumbnail.webp'); } 
+.act-5 { background-image: url('https://cdn.inflearn.com/public/courses/327351/cover/44676d5f-95fc-46eb-baea-6c344bdcb2e2/html-css-tumbnail2.jpg'); } 
+.act-6 { background-image: url('https://i.ytimg.com/vi/0Oq3EhXAwig/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCG9tnPcVQ-gej5yBywA4ml3yPOVw'); }
+.act-7 { background-image: url('Thumbnails/date.png'); } 
+.act-8 { background-image: url('https://www.scaler.com/topics/images/bootstrap-alert-thumbnail.webp'); } 
+.act-9 { background-image: url('https://i.ytimg.com/vi/JeXqaKeJSRI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXNyOsIxuj0ni_I6Cdclr002gAcw'); } 
+.act-10 { background-image: url('https://www.scaler.com/topics/images/javascript-arithmetic-operators-thumbnail.webp'); } 
+.act-11 { background-image: url('https://i.ytimg.com/vi/Kn06785pkJg/maxresdefault.jpg'); } 
+
+.category { color: var(--redice-red); font-weight: 900; font-size: 0.7rem; display: block; margin-bottom: 5px; }
+.tags { font-size: 0.65rem; color: #888; margin-bottom: 10px; font-weight: 700; }
+.project-block p { font-size: 0.9rem; color: #666; }
+
+/* Placeholders[cite: 1] */
+.placeholder { opacity: 0.4; border-style: dashed; }
+
+/* Contact Section - Light Theme */
+.contact-section.light {
+    padding: 100px 50px;
+    background-color: #ffffff; /* Pure white background */
+    color: #1a1a1a; /* Dark text */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-info h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 48px;
+    margin: 10px 0 30px 0;
+    color: #1a1a1a;
+}
+
+.contact-description {
+    font-family: 'Montserrat', sans-serif;
+    color: #666; /* Softer gray for description */
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contact-details .detail-item strong {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #E21D26; /* Consistent accent color */
+}
+
+.detail-text {
+    color: #1a1a1a !important;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Form Styling for Light Background */
+.contact-form .form-group input, 
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #f4f4f4; /* Light gray input fields */
+    border: 1px solid #e0e0e0;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-group input:focus, 
+.contact-form .form-group textarea:focus {
+    background: #fff;
+    border-color: #1a1a1a;
+    outline: none;
+}
+
+/* Map Wrapper for Light Theme */
+.map-wrapper {
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    filter: grayscale(0.5); /* Less intense filter for light theme */
+    transition: filter 0.3s ease;
+}
+
+.map-wrapper:hover {
+    filter: grayscale(0);
+}
+
+/* Socials Link Color */
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social-link {
+    font-size: 24px; /* Adjusts icon size */
+    color: #1a1a1a; /* Dark color for the white background */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ff4d4d; /* Turns red on hover */
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Specific GitHub hover color if you want to be fancy */
+.social-link:hover .fa-github {
+    color: #333;
+}
+
+/* Specific Facebook hover color */
+.social-link:hover .fa-facebook {
+    color: #1877f2;
+}
+
+/* Specific Instagram hover color */
+.social-link:hover .fa-instagram {
+    color: #e4405f;
+}
+/* Footer Styles */
+/* Footer Styles - Accent Theme */
+.main-footer {
+    padding: 60px 50px;
+    background-color: #E21D26; /* Your signature red */
+    color: #ffffff;
+    border-top: none; /* Removed border as the color provides enough separation */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-img {
+    height: 90px;
+    width: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.footer-img:hover {
+    opacity: 1;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for subtler text */
+}
+
+.footer-tagline {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7); /* Even softer white for the tagline */
+}
+
+.back-to-top a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-to-top a:hover {
+    background-color: #ffffff;
+    color: #E21D26; /* Inverts on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}

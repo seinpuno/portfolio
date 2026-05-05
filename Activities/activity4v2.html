@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity4v2</title>
+
+    <style>
+        body {
+            background-color: #2b2d31; /* Discord dark background */
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5865F2; /* Discord blurple */
+        }
+
+        form {
+            background-color: #313338;
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            background-color: #1e1f22;
+            color: white;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            background-color: #5865F2;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #4752c4;
+        }
+
+        button[type="reset"] {
+            background-color: #4f545c;
+            color: white;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #3c3f45;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form action="" method="post">
+        <h1>User Information Form</h1>
+
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="fname" required></td>
+            </tr>
+
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lname" required></td>
+            </tr>
+
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" required></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="reading"> Reading<br>
